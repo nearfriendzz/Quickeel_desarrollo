@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1024" x="243" y="154">
+<window height="768" width="1210" x="92" y="185">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -17,11 +17,15 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="75" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="131" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -30,15 +34,38 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="C:/Documents and Settings/rhernandez/Mis documentos/GitHub/Quickeel_desarrollo/Proyecto/Apphola/res/layout/activity_main.xml" title="activity_main.xml" tooltip="Apphola/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Apphola/res/layout/activity_main.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="C:/Documents and Settings/rhernandez/Mis documentos/GitHub/Quickeel_desarrollo/Proyecto/Apphola/src/com/example/apphola/MainActivity.java" title="MainActivity.java" tooltip="Apphola/src/com/example/apphola/MainActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Apphola/src/com/example/apphola/MainActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1340" selectionTopPixel="278"/>
+</editor>
 </editors>
 <views>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="com.android.ide.eclipse.adt.internal.lint.LintViewPart" partName="Lint Warnings">
+<viewState>
+<lintColWidth CategoryColumn="100" LocationColumn="175" MessageColumn="20"/>
+<lintColVisible CategoryColumn="true" LocationColumn="true" MessageColumn="true"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="75" org.eclipse.ui.ide.markerType="75" org.eclipse.ui.ide.pathField="100" org.eclipse.ui.ide.resourceField="75" org.eclipse.ui.ide.severityAndDescriptionField="250"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="75" org.eclipse.ui.ide.markerType="75" org.eclipse.ui.ide.pathField="39" org.eclipse.ui.ide.resourceField="75" org.eclipse.ui.ide.severityAndDescriptionField="436"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -107,7 +134,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.internal.introview" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="com.android.ide.eclipse.editors.CommonXmlEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -174,9 +201,11 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
 <view id="org.eclipse.ui.internal.introview"/>
+<view id="com.android.ide.eclipse.adt.internal.lint.LintViewPart"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -195,12 +224,14 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1856ac7" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="left">
-<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
+<folder activePageID="com.android.ide.eclipse.adt.internal.lint.LintViewPart" appearance="2" expanded="2">
 <page content="org.eclipse.ui.internal.introview" label="Welcome"/>
+<page content="com.android.ide.eclipse.adt.internal.lint.LintViewPart" label="Lint Warnings"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -211,14 +242,15 @@
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -246,7 +278,63 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/Apphola/res/layout/activity_main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Apphola/src/com/example/apphola/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/DOCUME~1/RHERNA~1/CONFIG~1/Temp/dexdump_Apphola_3302190008192144325.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/Apphola/bin/AndroidManifest.xml"/>
+</editors>
+<item historyLabel="activity_main.xml" index="0"/>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3627" y="75"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3713" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3597" y="115"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3366" y="73"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3258" y="75"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3610" y="18"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3845" y="20"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="758" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="685" y="12"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="758" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3845" y="20"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="3721" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="1340" y="0"/>
+</item>
+<item historyLabel="dexdump_Apphola_3302190008192144325.txt" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="1">
+<position info="not_deleted" x="1340" y="0"/>
+</item>
+<item historyLabel="activity_main.xml" index="0"/>
+<item historyLabel="Apphola Manifest" index="3"/>
+<item active="true" historyLabel="activity_main.xml" index="0"/>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -263,5 +351,24 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="Apphola/bin/AndroidManifest.xml">
+<persistable path="/Apphola/bin/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ic_action_search.png" tooltip="Apphola/res/drawable-mdpi/ic_action_search.png">
+<persistable path="/Apphola/res/drawable-mdpi/ic_action_search.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ic_action_search.png" tooltip="Apphola/res/drawable-xhdpi/ic_action_search.png">
+<persistable path="/Apphola/res/drawable-xhdpi/ic_action_search.png"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="dexdump_Apphola_3302190008192144325.txt" tooltip="C:\DOCUME~1\RHERNA~1\CONFIG~1\Temp\dexdump_Apphola_3302190008192144325.txt">
+<persistable uri="file:/C:/DOCUME~1/RHERNA~1/CONFIG~1/Temp/dexdump_Apphola_3302190008192144325.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Apphola/src/com/example/apphola/MainActivity.java">
+<persistable path="/Apphola/src/com/example/apphola/MainActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Apphola/res/layout/activity_main.xml">
+<persistable path="/Apphola/res/layout/activity_main.xml"/>
+</file>
+</mruList>
 </workbench>
