@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">Quickeel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_home">Quickeel</string>
+    <string name="bt_text_login">Iniciar sesión</string>
+    <string name="bt_text_registro">Registrate</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/logoazul">
+
+   
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        
+        <LinearLayout 
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            style="@style/Logo"
+            android:layout_width="250dp"
+            android:layout_height="250dp" />
+            
+        </LinearLayout>
+          <LinearLayout 
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    	<TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content" >
+    	    <TableRow >
+    	         <Button
+    	            android:id="@+id/btlogin"
+    	            android:layout_width="wrap_content"
+    	            android:layout_height="wrap_content"
+    	            android:text="@string/bt_text_login" android:background="@drawable/blackbutton"
+    	            style="@style/ButtonText"
+    	            />
+
+    	        <Button
+    	            android:id="@+id/btRegistro"
+    	            android:layout_width="wrap_content"
+    	            android:layout_height="wrap_content"
+    	            android:text="@string/bt_text_registro"
+    	            android:background="@drawable/bluebutton"
+    	            style="@style/ButtonText"
+    	            />
+
+    	    </TableRow>
+    	</TableLayout>
+            
+        </LinearLayout>
+         
+        
+    </LinearLayout>
+
+</RelativeLayout>
