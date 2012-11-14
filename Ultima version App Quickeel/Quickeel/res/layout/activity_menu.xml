@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  android:background="@color/blanco" 
+    android:orientation="vertical">
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/buttonlayout" android:orientation="horizontal"
+                android:layout_width="fill_parent" android:layout_height="55dp"
+                android:height="30dp" android:gravity="left|top" android:background="@drawable/fondoazul"
+                android:paddingTop="1dp" android:paddingBottom="2dp">
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/buttonlayout2" android:orientation="horizontal"
+                        android:layout_height="fill_parent" android:gravity="left|center_vertical"
+                        android:layout_gravity="left" android:layout_width="wrap_content">
+
+                       <ImageButton
+                           android:id="@+id/bthome"
+                           android:layout_width="42dp"
+                           android:layout_height="42dp"
+                           android:layout_marginLeft="3dp"
+                           android:layout_marginRight="3dp"
+                           android:layout_marginTop="5dp" android:background="@drawable/person"/>
+
+						<ImageView style="@style/TitleBarSeparator"  />
+                        <ImageButton
+                            android:id="@+id/btlogoimagen"
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/letra_quickeel" />
+                        
+						 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/buttonlayout3" android:orientation="horizontal"
+                                android:layout_height="fill_parent"  android:gravity="center"
+                                 android:layout_width="wrap_content" android:layout_marginLeft="60dp">
+						 <ImageView style="@style/TitleBarSeparator" />
+                          <ImageButton
+                              android:id="@+id/btsearch"
+                              android:layout_width="32dp"
+                              android:layout_height="32dp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_marginTop="5dp"
+                              android:background="@drawable/speaker"/>
+                        </LinearLayout>
+                </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" 
+    android:layout_height="match_parent" >
+  <TabHost android:id="@android:id/tabhost"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent">
+ 
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"  >
+ 
+         <TabWidget android:layout_width="match_parent" 
+                android:layout_height="wrap_content" android:background="#FF000000"
+                android:id="@android:id/tabs" />
+ 
+         <FrameLayout android:layout_width="fill_parent"  
+                android:layout_height="fill_parent" 
+                android:id="@android:id/tabcontent" >
+ 
+            <LinearLayout android:id="@+id/tab1" 
+                android:orientation="vertical" 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                
+               
+                   <ListView android:layout_width="fill_parent"  android:id="@+id/listviewTab1" 
+                   android:divider="@android:color/transparent" 
+                android:layout_height="fill_parent"  >
+               
+                   </ListView>
+               
+       		 </LinearLayout>
+ 
+            <LinearLayout android:id="@+id/tab2"
+                android:orientation="vertical" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <LinearLayout android:layout_width="match_parent" android:gravity="center" android:background="@color/blanco"
+                android:layout_height="wrap_content" android:orientation="horizontal" >
+                    <Button android:id="@+id/btCityList" android:layout_width="wrap_content" android:text="List"
+                android:layout_height="wrap_content" />
+                    <Button android:id="@+id/btCityMaps" android:layout_width="wrap_content" android:text="Map"
+                android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ListView android:layout_width="fill_parent"  android:id="@+id/listviewTab2"
+                android:layout_height="fill_parent"   >
+               
+                   </ListView>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tab3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView android:id="@+id/textView3"
+                    android:text="Contenido Tab 2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+      
+          
+ 
+         </FrameLayout>
+    </LinearLayout>
+ 
+</TabHost>
+</LinearLayout>
+</LinearLayout>

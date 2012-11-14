@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string name="bt_text_login">Iniciar sesión</string>
+    <string name="bt_text_registro">Registrate</string>
+
+    <string name="app_name">Quickeel</string>
+    <string name="hello_world">Hola!</string>
+    <string name="menu_settings">Configuracion</string>
+	<string name="s_edit_hit_nombre">Nombre Completo</string>
+	<string name="s_edit_hit_email">Correo Electronico</string>
+	<string name="s_edit_hit_password">Contraseña</string>
+	<string name="s_edit_hit_passwordverify">Verificar Contraseña</string>
+	<string name="btunirse">Unirse</string>
+	
+
+	<string name="s_lbl_usuario">Correo Electronico</string>
+	<string name="s_edit_usuario">Intrudoccir Email</string>
+	<string name="s_lbl_password">Contraseña</string>
+	<string name="s_edit_password">Introduccir Password</string>
+	<string name="s_lbl_iniciar_sesion">Iniciar Sesión</string>
+	<string name="msg_login_email">Email es requerido!</string>
+	<string name="msg_login_password">Password es requerido!</string>
+	
+	
+	<string name="msg_registro_campo">Campo requerido!</string>
+	<string name="msg_registro_campo_ver">Contraseña no coincide!</string>
+	
+	<string name="s_lbl_registro">Únete gratis</string>
+	<string name="s_lbl_registro_nombre_completo">Nombre Completo</string>
+	<string name="s_lbl_registro_email">Correo Electronico</string>
+	<string name="s_lbl_registro_password">Contraseña</string>
+	<string name="s_lbl_registro_password_ver">Verificar Contraseña</string>
+	<string name="bt_text_registro_comenzar">Comenzar</string>
+	
+	
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"   android:layout_gravity="center"
+    android:orientation="vertical" android:background="@color/logoazul" >
+    
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" android:background="@drawable/round_borders" >
+    
+     <LinearLayout   android:layout_width="fill_parent" android:gravity="center|bottom" 
+    android:layout_height="fill_parent"  android:orientation="vertical" android:layout_weight="3">
+ 	<TextView android:id="@+id/lbl_usuario"  android:layout_width="wrap_content" android:textColor="@color/negro"  android:layout_marginBottom="15dip" 
+    android:layout_height="wrap_content"  android:text="@string/s_lbl_registro" android:textSize="25sp"/>
+ </LinearLayout>
+ 
+   <LinearLayout   android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" android:orientation="vertical" android:layout_weight="2">
+  
+
+      <EditText android:id="@+id/edit_registro_nombre"  android:layout_width="match_parent"  android:layout_marginBottom="15dip"  android:maxLength="25"
+    android:layout_height="wrap_content" android:hint="@string/s_lbl_registro_nombre_completo" android:inputType="textPersonName" />   
+ 
+    
+      <EditText android:id="@+id/edit_registro_email"  android:layout_width="match_parent"  android:layout_marginBottom="15dip" 
+    android:layout_height="wrap_content" android:hint="@string/s_lbl_registro_email" android:inputType="textEmailAddress" />"
+        
+   
+      <EditText android:id="@+id/edit_registro_password"  android:layout_width="match_parent"  android:layout_marginBottom="15dip" 
+    android:layout_height="wrap_content"   android:hint="@string/s_lbl_registro_password" android:password="true"/>   
+ 
+      <EditText android:id="@+id/edit_registro_password_ver"  android:layout_width="match_parent"    android:layout_marginBottom="15dip" 
+    android:layout_height="wrap_content"  android:hint="@string/s_lbl_registro_password_ver"  android:password="true"/>"
+    
+    
+    <LinearLayout   android:layout_width="fill_parent" android:gravity="center|top" 
+    android:layout_height="fill_parent"  android:orientation="vertical" android:layout_weight="2">
+ 	 <Button
+ 	      			android:layout_marginTop="10dip" 
+    	            android:id="@+id/btJoin"
+    	            android:layout_width="fill_parent"
+    	            android:layout_height="wrap_content"
+    	            android:text="@string/bt_text_registro_comenzar"
+    	            android:background="@drawable/greenbutton"
+    	            style="@style/ButtonText"
+    	            />
+ </LinearLayout>
+            
+             
+ 
+      </LinearLayout>  
+   </LinearLayout>
+
+</LinearLayout>

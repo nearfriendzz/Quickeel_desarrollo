@@ -1,115 +1,170 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="masterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="masterModelStoreContainer">
-          <EntitySet Name="spt_monitor" EntityType="masterModel.Store.spt_monitor" store:Type="Tables" store:Schema="dbo" store:Name="spt_monitor">
-            <DefiningQuery>SELECT 
-      [spt_monitor].[lastrun] AS [lastrun], 
-      [spt_monitor].[cpu_busy] AS [cpu_busy], 
-      [spt_monitor].[io_busy] AS [io_busy], 
-      [spt_monitor].[idle] AS [idle], 
-      [spt_monitor].[pack_received] AS [pack_received], 
-      [spt_monitor].[pack_sent] AS [pack_sent], 
-      [spt_monitor].[connections] AS [connections], 
-      [spt_monitor].[pack_errors] AS [pack_errors], 
-      [spt_monitor].[total_read] AS [total_read], 
-      [spt_monitor].[total_write] AS [total_write], 
-      [spt_monitor].[total_errors] AS [total_errors]
-      FROM [dbo].[spt_monitor] AS [spt_monitor]</DefiningQuery>
-          </EntitySet>
+      <Schema Namespace="desarrolloModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="desarrolloModelStoreContainer">
+          <EntitySet Name="Quick" EntityType="desarrolloModel.Store.Quick" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="QuickComment" EntityType="desarrolloModel.Store.QuickComment" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Subtype" EntityType="desarrolloModel.Store.Subtype" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Type" EntityType="desarrolloModel.Store.Type" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="User" EntityType="desarrolloModel.Store.User" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
         </EntityContainer>
-        <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'master.dbo.spt_monitor' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
-      -->
-        <EntityType Name="spt_monitor">
+        <EntityType Name="Quick">
           <Key>
-            <PropertyRef Name="lastrun" />
-            <PropertyRef Name="cpu_busy" />
-            <PropertyRef Name="io_busy" />
-            <PropertyRef Name="idle" />
-            <PropertyRef Name="pack_received" />
-            <PropertyRef Name="pack_sent" />
-            <PropertyRef Name="connections" />
-            <PropertyRef Name="pack_errors" />
-            <PropertyRef Name="total_read" />
-            <PropertyRef Name="total_write" />
-            <PropertyRef Name="total_errors" />
+            <PropertyRef Name="Pk_Quick" />
           </Key>
-          <Property Name="lastrun" Type="datetime" Nullable="false" />
-          <Property Name="cpu_busy" Type="int" Nullable="false" />
-          <Property Name="io_busy" Type="int" Nullable="false" />
-          <Property Name="idle" Type="int" Nullable="false" />
-          <Property Name="pack_received" Type="int" Nullable="false" />
-          <Property Name="pack_sent" Type="int" Nullable="false" />
-          <Property Name="connections" Type="int" Nullable="false" />
-          <Property Name="pack_errors" Type="int" Nullable="false" />
-          <Property Name="total_read" Type="int" Nullable="false" />
-          <Property Name="total_write" Type="int" Nullable="false" />
-          <Property Name="total_errors" Type="int" Nullable="false" />
+          <Property Name="Pk_Quick" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="160" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Hour" Type="time" Nullable="false" />
+          <Property Name="Fulldate" Type="datetime" Nullable="false" />
+          <Property Name="Latitud" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Longitud" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="ID_type" Type="int" Nullable="false" />
+          <Property Name="ID_subtype" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuickComment">
+          <Key>
+            <PropertyRef Name="Pk_Comment" />
+          </Key>
+          <Property Name="Pk_Comment" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_quick" Type="int" Nullable="false" />
+          <Property Name="CreatorCommentID" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Subtype">
+          <Key>
+            <PropertyRef Name="Pk_Subtype" />
+          </Key>
+          <Property Name="Pk_Subtype" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ID_Type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="Pk_Type" />
+          </Key>
+          <Property Name="Pk_Type" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Pk_User" />
+          </Key>
+          <Property Name="Pk_User" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Fullname" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
         </EntityType>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="masterModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="spt_monitor" EntityType="masterModel.spt_monitor" />
+      <Schema Namespace="desarrolloModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="desarrolloEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Quicks" EntityType="desarrolloModel.Quick" />
+          <EntitySet Name="QuickComments" EntityType="desarrolloModel.QuickComment" />
+          <EntitySet Name="Subtypes" EntityType="desarrolloModel.Subtype" />
+          <EntitySet Name="Types" EntityType="desarrolloModel.Type" />
+          <EntitySet Name="Users" EntityType="desarrolloModel.User" />
         </EntityContainer>
-        <EntityType Name="spt_monitor">
+        <EntityType Name="Quick">
           <Key>
-            <PropertyRef Name="lastrun" />
-            <PropertyRef Name="cpu_busy" />
-            <PropertyRef Name="io_busy" />
-            <PropertyRef Name="idle" />
-            <PropertyRef Name="pack_received" />
-            <PropertyRef Name="pack_sent" />
-            <PropertyRef Name="connections" />
-            <PropertyRef Name="pack_errors" />
-            <PropertyRef Name="total_read" />
-            <PropertyRef Name="total_write" />
-            <PropertyRef Name="total_errors" />
+            <PropertyRef Name="Pk_Quick" />
           </Key>
-          <Property Name="lastrun" Type="DateTime" Nullable="false" />
-          <Property Name="cpu_busy" Type="Int32" Nullable="false" />
-          <Property Name="io_busy" Type="Int32" Nullable="false" />
-          <Property Name="idle" Type="Int32" Nullable="false" />
-          <Property Name="pack_received" Type="Int32" Nullable="false" />
-          <Property Name="pack_sent" Type="Int32" Nullable="false" />
-          <Property Name="connections" Type="Int32" Nullable="false" />
-          <Property Name="pack_errors" Type="Int32" Nullable="false" />
-          <Property Name="total_read" Type="Int32" Nullable="false" />
-          <Property Name="total_write" Type="Int32" Nullable="false" />
-          <Property Name="total_errors" Type="Int32" Nullable="false" />
+          <Property Name="Pk_Quick" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="160" Unicode="false" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Hour" Type="Time" Nullable="false" />
+          <Property Name="Fulldate" Type="DateTime" Nullable="false" />
+          <Property Name="Latitud" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Longitud" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="ID_type" Type="Int32" Nullable="false" />
+          <Property Name="ID_subtype" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuickComment">
+          <Key>
+            <PropertyRef Name="Pk_Comment" />
+          </Key>
+          <Property Name="Pk_Comment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ID_quick" Type="Int32" Nullable="false" />
+          <Property Name="CreatorCommentID" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Subtype">
+          <Key>
+            <PropertyRef Name="Pk_Subtype" />
+          </Key>
+          <Property Name="Pk_Subtype" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ID_Type" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="Pk_Type" />
+          </Key>
+          <Property Name="Pk_Type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Pk_User" />
+          </Key>
+          <Property Name="Pk_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
-          <EntitySetMapping Name="spt_monitor"><EntityTypeMapping TypeName="masterModel.spt_monitor"><MappingFragment StoreEntitySet="spt_monitor">
-            <ScalarProperty Name="lastrun" ColumnName="lastrun" />
-            <ScalarProperty Name="cpu_busy" ColumnName="cpu_busy" />
-            <ScalarProperty Name="io_busy" ColumnName="io_busy" />
-            <ScalarProperty Name="idle" ColumnName="idle" />
-            <ScalarProperty Name="pack_received" ColumnName="pack_received" />
-            <ScalarProperty Name="pack_sent" ColumnName="pack_sent" />
-            <ScalarProperty Name="connections" ColumnName="connections" />
-            <ScalarProperty Name="pack_errors" ColumnName="pack_errors" />
-            <ScalarProperty Name="total_read" ColumnName="total_read" />
-            <ScalarProperty Name="total_write" ColumnName="total_write" />
-            <ScalarProperty Name="total_errors" ColumnName="total_errors" />
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="desarrolloModelStoreContainer" CdmEntityContainer="desarrolloEntities">
+          <EntitySetMapping Name="Quicks"><EntityTypeMapping TypeName="desarrolloModel.Quick"><MappingFragment StoreEntitySet="Quick">
+            <ScalarProperty Name="Pk_Quick" ColumnName="Pk_Quick" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="Hour" ColumnName="Hour" />
+            <ScalarProperty Name="Fulldate" ColumnName="Fulldate" />
+            <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+            <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="ID_type" ColumnName="ID_type" />
+            <ScalarProperty Name="ID_subtype" ColumnName="ID_subtype" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="QuickComments"><EntityTypeMapping TypeName="desarrolloModel.QuickComment"><MappingFragment StoreEntitySet="QuickComment">
+            <ScalarProperty Name="Pk_Comment" ColumnName="Pk_Comment" />
+            <ScalarProperty Name="ID_quick" ColumnName="ID_quick" />
+            <ScalarProperty Name="CreatorCommentID" ColumnName="CreatorCommentID" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Subtypes"><EntityTypeMapping TypeName="desarrolloModel.Subtype"><MappingFragment StoreEntitySet="Subtype">
+            <ScalarProperty Name="Pk_Subtype" ColumnName="Pk_Subtype" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Types"><EntityTypeMapping TypeName="desarrolloModel.Type"><MappingFragment StoreEntitySet="Type">
+            <ScalarProperty Name="Pk_Type" ColumnName="Pk_Type" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="desarrolloModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="Pk_User" ColumnName="Pk_User" />
+            <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -125,7 +180,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="entidades">
-        <EntityTypeShape EntityType="masterModel.spt_monitor" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7427376302083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="desarrolloModel.Quick" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="desarrolloModel.QuickComment" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="desarrolloModel.Subtype" Width="1.5" PointX="2.75" PointY="3.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="desarrolloModel.Type" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="desarrolloModel.User" Width="1.5" PointX="4.75" PointY="3.75" Height="1.7879850260416674" IsExpanded="true" />
       </Diagram>
     </Diagrams>
   </Designer>

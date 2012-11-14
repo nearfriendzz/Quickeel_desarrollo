@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CNMV")]
 [assembly: AssemblyProduct("QuickeelServices")]
-[assembly: AssemblyCopyright("Copyright © CNMV 2012")]
+[assembly: AssemblyCopyright("Copyright © Quickeel 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

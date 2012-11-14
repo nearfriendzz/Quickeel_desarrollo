@@ -1,0 +1,112 @@
+body {
+    border-top: 15px solid #eee;
+    padding-top: 120px;
+}
+
+
+/* Features ============================================= */
+
+a.appstore img {
+    margin: 20px 5px 0 0;
+}
+
+img.avatar {
+    margin: 0 1.5em 1.5em 0;
+    width: 100px;
+}
+
+#features {
+    margin: 1.5em 0;
+    min-height: 370px;
+}
+
+#features td {
+    vertical-align: top;
+}
+
+
+/* Screen control ======================================= */
+
+.carousel-nav {
+    margin-top: 1.5em;
+    margin-left: 105px;
+}
+
+.carousel-nav a {
+    float: left;
+    width: 17px;
+    height: 16px;
+    background: url('../Images/bullet.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    margin-right: 3px;
+}
+.carousel-nav a.active {
+    background: url('../Images/bullet-active.png') no-repeat;
+}
+
+
+/* Phones =============================================== */
+
+div.iphone, div.android, div.wphone {
+    position: relative;
+    width: 290px;
+}
+
+div.iphone > div.carousel, div.android > div.carousel, div.wphone > div.carousel {
+    position: absolute;
+}
+
+
+/* iPhone styles  */
+
+div.iphone {
+    background: url('../Images/iphone.png') no-repeat top left;
+    height: 565px;
+}
+
+div.iphone > div.carousel {
+    left: 24px;
+    top: 102px;
+}
+
+div.iphone > div.carousel img {
+    height: 365px;
+    width: 245px;
+}
+
+
+/* Android styles */
+
+div.android {
+    background: url('../Images/htc.png') no-repeat top left;
+    height: 556px;
+}
+
+div.android > div.carousel {
+    left: 24px;
+    top: 57px;
+}
+
+div.android > div.carousel img {
+    height: 428px;
+    width: 240px;
+}
+
+
+/* Windows Phone styles */
+
+div.wphone {
+    background: url('../Images/lumia900.png') no-repeat top left;
+    height: 545px;
+}
+
+div.wphone > div.carousel {
+    left: 23px;
+    top: 73px;
+}
+
+div.wphone > div.carousel img {
+    height: 407px;
+    width: 244px;
+}
